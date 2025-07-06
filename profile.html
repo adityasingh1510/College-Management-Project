@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <title>My Profile</title>
+</head>
+<body>
+    <button id="toggleThemeBtn">Switch Theme</button>
+  <div class="container">
+    <h1>My Profile</h1>
+  
+
+
+    <div class="profile-card" id="profileView">
+      <p><span class="label">Username:</span> <span id="username"></span></p>
+      <p><span class="label">Email:</span> <span id="email"></span></p>
+      <p><span class="label">Department:</span> <span id="department"></span></p>
+      <p><span class="label">Role:</span> <span id="role"></span></p>
+      <button id="editBtn">Edit Profile</button>
+    </div>
+
+    <div class="profile-card" id="editProfileView" style="display: none;">
+      <form id="editProfileForm">
+        <input type="text" id="editName" placeholder="Full Name" required />
+        <input type="email" id="editEmail" placeholder="Email Address" required />
+        <input type="text" id="editDepartment" placeholder="Department" required />
+        <button type="submit">Save Changes</button>
+        <button type="button" id="cancelEditBtn">Cancel</button>
+      </form>
+    </div>
+
+    <button id="logoutBtn">Logout</button>
+  </div>
+
+  <script src="profile.js"></script>
+</body>
+</html>

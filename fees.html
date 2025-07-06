@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <title>Fees Management</title>
+</head>
+<body>
+    <button id="toggleThemeBtn">Switch Theme</button>
+  <h1>College Management System - Fees Management</h1>
+
+
+  <div class="container">
+    <h2>Add Payment</h2>
+    <form id="feesForm">
+      <label for="studentName">Student Name</label>
+      <select id="studentName" required>
+        <option value="">Select Student</option>
+      </select>
+
+      <label for="department">Department</label>
+      <input type="text" id="department" readonly />
+
+      <label for="paymentDate">Date of Payment</label>
+      <input type="date" id="paymentDate" required />
+
+      <label for="amount">Amount Paid</label>
+      <input type="number" id="amount" placeholder="Enter amount" required />
+
+      <label for="mode">Payment Mode</label>
+      <select id="mode" required>
+        <option value="">Select Mode</option>
+        <option value="Cash">Cash</option>
+        <option value="UPI">UPI</option>
+        <option value="Card">Card</option>
+        <option value="Bank Transfer">Bank Transfer</option>
+      </select>
+
+      <label for="remarks">Remarks</label>
+      <input type="text" id="remarks" placeholder="Optional" />
+
+      <button type="submit">Save Payment</button>
+    </form>
+  </div>
+
+  <div class="container">
+    <h2>Payment Records</h2>
+    <button id="exportCsvBtn" style="margin-bottom: 15px;">Export to CSV</button>
+    <table id="feesTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Department</th>
+          <th>Date</th>
+          <th>Amount</th>
+          <th>Mode</th>
+          <th>Remarks</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Records will appear here -->
+      </tbody>
+    </table>
+    <p id="noFeesData" class="no-data" style="display: none;">No payment records yet.</p>
+  </div>
+
+  <script src="fees.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <title>Courses Management</title>
+</head>
+<body>
+  <button id="toggleThemeBtn">Switch Theme</button>
+  <h1>College Management System - Courses</h1>
+
+
+  <div class="container">
+    <h2 id="formTitle">Add New Course</h2>
+    <form id="courseForm">
+      <input type="text" id="courseName" placeholder="Course Name" required />
+      <input type="text" id="courseCode" placeholder="Course Code" required />
+      <select id="courseDept" required>
+        <option value="">Select Department</option>
+        <option value="Computer Science">Computer Science</option>
+        <option value="Mechanical">Mechanical</option>
+        <option value="Electrical">Electrical</option>
+        <option value="Civil">Civil</option>
+      </select>
+      <input type="number" id="courseCredits" placeholder="Credits" required min="1" max="10" />
+      <button type="submit">Add Course</button>
+    </form>
+
+    <h2>Available Courses</h2>
+    <table id="coursesTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Code</th>
+          <th>Department</th>
+          <th>Credits</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Course rows will go here -->
+      </tbody>
+    </table>
+
+    <p id="noCourseMessage" class="no-data" style="display: none;">
+      No courses available yet.
+    </p>
+  </div>
+
+  <script src="courses.js"></script>
+</body>
+</html>

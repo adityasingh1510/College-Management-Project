@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <title>College Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <button id="toggleThemeBtn">Switch Theme</button>
+  <h1>College Management System - Dashboard</h1>
+ 
+
+
+  <div class="container">
+    <div class="dashboard-cards">
+      <div class="card" id="studentsCount">
+        <h3>Total Students</h3>
+        <p>0</p>
+      </div>
+      <div class="card" id="coursesCount">
+        <h3>Total Courses</h3>
+        <p>0</p>
+      </div>
+    </div>
+
+    <h2>Students by Department</h2>
+    <canvas id="deptChart" height="100"></canvas>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

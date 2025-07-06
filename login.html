@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <title>Login</title>
+</head>
+<body>
+    <button id="toggleThemeBtn">Switch Theme</button>
+  <div class="container">
+    <h1>Login</h1>
+
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="Email Address" required />
+      <input type="password" id="loginPassword" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+    <p><a href="#" id="forgotPasswordLink">Forgot Password?</a></p>
+
+<div id="forgotPasswordBox" style="display: none; margin-top: 20px;">
+  <h3>Reset Password</h3>
+  <input type="email" id="resetEmail" placeholder="Enter your registered email" required />
+  <input type="text" id="resetDepartment" placeholder="Enter your department" required />
+  <input type="password" id="newPassword" placeholder="Enter new password" required />
+  <button id="resetPasswordBtn">Reset Password</button>
+</div>
+
+    <p>Don't have an account? <a href="register.html">Register here</a></p>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <title>Students Management</title>
+</head>
+<body>
+    <button id="toggleThemeBtn">Switch Theme</button>
+  <h1>College Management System - Students</h1>
+
+
+  <div class="container">
+    <h2 id="formTitle">Register New Student</h2>
+    <form id="studentForm">
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="Email Address" required />
+      <input type="text" id="rollNo" placeholder="Roll No" required />
+      <select id="department" required>
+        <option value="">Select Department</option>
+        <option value="Computer Science">Computer Science</option>
+        <option value="Mechanical">Mechanical</option>
+        <option value="Electrical">Electrical</option>
+        <option value="Civil">Civil</option>
+      </select>
+      <button type="submit">Register Student</button>
+    </form>
+
+    <h2>Registered Students</h2>
+    <table id="studentsTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Roll No</th>
+          <th>Department</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Student rows go here -->
+      </tbody>
+    </table>
+    <p id="noDataMessage" class="no-data" style="display: none;">
+      No students registered yet.
+    </p>
+  </div>
+
+  <script src="stu.js"></script>
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const user = JSON.parse(localStorage.getItem("loggedInUser"));
+
+    if (!user || user.role !== "admin") {
+      window.location.href = "login.html";
+    }
+  });
+</script>
+</html>

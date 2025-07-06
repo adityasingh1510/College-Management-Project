@@ -1,0 +1,222 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* BODY BACKGROUND */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #d9e4f5, #f7faff);
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 600px;
+  margin: auto;
+  background-color: #ffffffee;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+}
+
+/* HEADINGS */
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+/* FORMS */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, select {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  width: 100%;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+
+/* BUTTONS */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#logoutBtn {
+  background-color: #dc3545;
+}
+
+#logoutBtn:hover {
+  background-color: #a71d2a;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.delete-btn:hover {
+  background-color: #a71d2a;
+}
+
+.export-btn {
+  background-color: #28a745;
+}
+
+.export-btn:hover {
+  background-color: #1e7e34;
+}
+
+.cancel-btn {
+  background-color: #6c757d;
+}
+
+.cancel-btn:hover {
+  background-color: #5a6268;
+}
+
+/* LINKS */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* PROFILE CARD */
+.profile-card {
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f4f6fa;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.profile-card p {
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+.label {
+  font-weight: 600;
+  color: #007bff;
+  width: 140px;
+  display: inline-block;
+}
+
+/* TABLES */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #dee2e6;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+.no-data {
+  text-align: center;
+  color: #888;
+  padding: 20px;
+}
+#forgotPasswordBox {
+  background: #f4f6fa;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#forgotPasswordBox h2 {
+  color: #007bff;
+  margin-bottom: 15px;
+}
+/* Dark mode styles */
+body.dark {
+  background: linear-gradient(135deg, #232526, #414345);
+  color: #f1f1f1;
+}
+
+body.dark .container {
+  background-color: rgba(33, 37, 41, 0.8);
+  color: #f1f1f1;
+}
+
+body.dark h1, 
+body.dark h2 {
+  color: #f1f1f1;
+}
+
+body.dark input, 
+body.dark select {
+  background-color: #343a40;
+  color: #f1f1f1;
+  border: 1px solid #555;
+}
+
+body.dark input::placeholder,
+body.dark select {
+  color: #999;
+}
+
+body.dark button {
+  background-color: #6c757d;
+}
+
+body.dark button:hover {
+  background-color: #5a6268;
+}
+
+body.dark table th {
+  background-color: #495057;
+}
+
+body.dark table td {
+  background-color: #343a40;
+  color: #f1f1f1;
+}
+
+body.dark a {
+  color: #17a2b8;
+}
